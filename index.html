@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Tip calculator app</title>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <img src="./images/logo.svg" alt="Image" class="often">
+
+        <div class="container">
+            <div class="section1">
+                <form id="frm1" name="form1" class="form1">
+                    <label for="bill" class="billy">Bill</label><br>
+                    <input class="billInput" id="billInput" type="number" min=1 autocomplete="off" name="bill" value="" placeholder="0" onclick="activeStatus1()">
+                    <img src="./images/icon-dollar.svg" alt="image" class="dollerImage">
+                </form>
+                <p class="select"> Select Tip %</p>
+                <div class="grid">
+                    <div class="tip1" id="tip1" onclick="fivePercent()">5%</div>
+                    <div class="tip2" id="tip2" onclick="tenPercent()">10%</div>
+                    <div class="tip3" id="tip3" onclick="fifteenPercent()">15%</div>
+                    <div class="tip4" id="tip4" onclick="twentyFivePercent()">25%</div>
+                    <div class="tip5" id="tip5" onclick="fiftyPercent()">50%</div>
+                    <div id="custom" onclick="custom()">
+                        <form id="customTip"><input class="custom" type="number" placeholder="Custom"></form>
+                    </div>
+                </div>
+                <form id="form2" name="myForm" class="form2" onsubmit="return validateForm()">
+                    <label for="person" class="logs"> Number of People </label><br>
+                    <input class="personInput" id="firstInput" type="number" min="1" autocomplete="off" name="person" value="" placeholder="0" onclick="activeStatus2()">
+                    <img src="./images/icon-person.svg" alt="images" class="personImage">
+                </form>
+            </div>
+            <div class="section2">
+                <div class="flex">
+                    <div class="flexpart1">
+                        <p class="margin">Tip Amount</p>
+                        <p class="perPerson">/ person</p>
+                    </div>
+                    <div class="flexpart2">
+                        <h1>$ <span class="spanElement1" id="spanElement1"> 0.00</span></h1>
+                    </div>
+                </div>
+                <div class="mainflex">
+                    <div class="flex1">
+                        <p class="margin"> Total</p>
+                        <p class="perPerson">/ person</p>
+                    </div>
+                    <div class="flex2">
+                        <h1>$ <span class="spanElement2" id="spanElement2">0.00</span></h1>
+                    </div>
+                </div>
+                <button class="reset" id="button" onclick="reset()">Reset</button>
+            </div>
+        </div>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.frontendmentor.io/profile/Muhammad-Habban" target="_blank">Muhammad Habban</a>.
+        </div>
+    </main>
+</body>
+
+</html>
